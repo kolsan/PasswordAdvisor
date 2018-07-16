@@ -8,7 +8,7 @@ $MailBody_ENU_ES1 =   '<img src="cid:IMAGE.jpg" /><p>&nbsp;</p>
 <p>Hi '
 $MailBody_ENU_ES2 = '!</p>
 <p>We inform you that your password <strong>will expire in the 3 next days</strong>. So, please proceed to change it. Keep in mind that, if you don&acute;t change it in time, you can experience some services malfunctions including an account lock.</p>
-<p>If you are in the office, you can change the password any time simply pressing <strong>ctrl + alt + supr</strong> buttons. If you are outside, you can change it too, via the <strong><a href="https://posta.batz.com/owa" target="_blank" rel="noopener">webmail</a></strong> web and there, in options (up and right), choose change password.</p>
+<p>If you are in the office, you can change the password any time simply pressing <strong>ctrl + alt + supr</strong> buttons. If you are outside, you can change it too, via the <strong><a href="https://mail.domain.com" target="_blank" rel="noopener">webmail</a></strong> web and there, in options (up and right), choose change password.</p>
 <p>Once the password has been changed, remember to do it as well in your mobile devices, wifi, mail etc.</p>
 <p>Security information concern to all of us. By this reason, the IT department want to involve you with this compromised and share with you a news capsule.</p>
 </td>
@@ -20,7 +20,7 @@ $MailBody_ENU_ES2 = '!</p>
 
 $MailBody_ENU_ES3 = '!</p>
 <p>Te recordamos que tu contrase&ntilde;a <strong>va a caducar en 3 dias</strong>, asi que , por favor, procede a cambiarla. Te recordamos que si no la cambias a tiempo puedes experimentar bloqueos de cuenta o malfuncionamiento en los servicios.</p>
-<p>Si estas en Batz, puedes cambiar la contrase&ntilde;a en cualquier momento pulsando la combinaci&oacute;n de teclas <strong>ctrl + alt + supr</strong>. Si te encuentras fuera, tambien puedes. Entra en el <a href="https://posta.batz.com/owa" target="_blank" rel="noopener"><strong>correo</strong></a> web y en opciones (arriba a la derecha), selecciona <em>cambiar contrase&ntilde;a</em>.</p>
+<p>Si estas en la oficina, puedes cambiar la contrase&ntilde;a en cualquier momento pulsando la combinaci&oacute;n de teclas <strong>ctrl + alt + supr</strong>. Si te encuentras fuera, tambien puedes. Entra en el <a href="https://mail.domain.com" target="_blank" rel="noopener"><strong>correo</strong></a> web y en opciones (arriba a la derecha), selecciona <em>cambiar contrase&ntilde;a</em>.</p>
 <p>Una vez cambiada, recuerda hacerlo tambien en tus dispositivos moviles, correo electronico, wifi etc.</p>
 <p>La seguridad de la informacion nos concierne a todos. Es por ello que desde IKS queremos hacerte participe en este compromiso y compartir contigo esta pildora informativa.</p>
 </td>
@@ -64,9 +64,9 @@ $Quote = [char]39
         $EmailBody = $MailBody_ENU_ES1 + $user.GivenName + $MailBody_ENU_ES2 + $user.GivenName + $MailBody_ENU_ES3
         $File0 = "PATH\IMAGE.jpg"
         $File1 = “PATHPATPATH\ES" +"\File_ES_00"+ $Capsule +".pdf”
-        $File2 = “PATPATH\ENU" +"\FileFile_ENU_00"+ $Capsule +".pdf”
-        $File3 = “PATH\CH" +"\FileFileFile_CH_00"+ $Capsule +".pdf”
-        Send-MailMessage -To $user.EmailAddress -From $MailSender -SmtpServer $SMTPServer -Subject $Subject -BodyAsHtml $EmailBody -Encoding "UTF32" -Attachments $File0,$File1,$File2,$File3 -Bcc 'ksantisteban@batz.com'
+        $File2 = “PATPATH\ENU" +"\File_ENU_00"+ $Capsule +".pdf”
+        $File3 = “PATH\CH" +"\File_CH_00"+ $Capsule +".pdf”
+        Send-MailMessage -To $user.EmailAddress -From $MailSender -SmtpServer $SMTPServer -Subject $Subject -BodyAsHtml $EmailBody -Encoding "UTF32" -Attachments $File0,$File1,$File2,$File3 '
 
          }
 
@@ -78,7 +78,7 @@ $Quote = [char]39
         $File1 = “PATH\ES" +"\File_ES_00"+ $Capsule +".pdf”
         $File2 = “PATH\ENU" +"\File_ENU_00"+ $Capsule +".pdf”
         $File3 = “PATH\CZ" +"\File_CZ_00"+ $Capsule +".pdf”
-        Send-MailMessage -To $user.EmailAddress -From $MailSender -SmtpServer $SMTPServer -Subject $Subject -BodyAsHtml $EmailBody -Encoding "UTF32" -Attachments $File0,$File1,$File2,$File3 -Bcc 'ksantisteban@batz.com'
+        Send-MailMessage -To $user.EmailAddress -From $MailSender -SmtpServer $SMTPServer -Subject $Subject -BodyAsHtml $EmailBody -Encoding "UTF32" -Attachments $File0,$File1,$File2,$File3 '
         }
 
      if ($user."UserPrincipalName" -like '*@subdomain3.domain.com')
@@ -86,9 +86,9 @@ $Quote = [char]39
         $Subject = $MailSubject_ENU_ES
         $EmailBody = $MailBody_ENU_ES1 + $user.GivenName + $MailBody_ENU_ES2 + $user.GivenName + $MailBody_ENU_ES3
         $File0 = "PATH\IMAGE.jpg"
-        $File1 = “PATH\ES" +"\FileFile_ES_00"+ $Capsule +".pdf”
+        $File1 = “PATH\ES" +"\File_ES_00"+ $Capsule +".pdf”
         $File2 = "PATH\ENU" +"\File_ENU_00"+ $Capsule +".pdf”
-        Send-MailMessage -To $user.EmailAddress -From $MailSender -SmtpServer $SMTPServer -Subject $Subject -BodyAsHtml $EmailBody -Encoding "UTF32" -Attachments $File0,$File1,$File2 -Bcc 'ksantisteban@batz.com'
+        Send-MailMessage -To $user.EmailAddress -From $MailSender -SmtpServer $SMTPServer -Subject $Subject -BodyAsHtml $EmailBody -Encoding "UTF32" -Attachments $File0,$File1,$File2 '
         
         
         }
